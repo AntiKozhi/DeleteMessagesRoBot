@@ -11,4 +11,8 @@ async def start_forward(
     c = 0
     async for message in client.search_messages(from_channel,filter='document'):
             await asyncio.sleep(3)
-            await message.copy(to_channel)
+            await client.copy_message(
+                chat_id = to_channel,
+                from_chat_id = from_channel,
+                message_id = message.message_id
+            )
