@@ -15,6 +15,6 @@ async def forward(client: Bot, message: Message):
     await start_forward(
         client.USER,
         from_channel,
-        to_channel,
+        to_channel
     )
     await message.reply_text("Completed")
