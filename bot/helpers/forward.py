@@ -24,7 +24,7 @@ async def start_forward(
             
             await client.send_document(
                 chat_id = to_channel,
-                document = file_id,
+                document = doc_id,
                 caption = caption
             )
             count = count + 1
