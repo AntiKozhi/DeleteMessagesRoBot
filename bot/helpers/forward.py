@@ -16,7 +16,7 @@ async def start_forward(
         if count > 200:
             await asyncio.sleep(200)
             count = 0
-        if c = 10000:
+        if c == 10000:
             await asyncio.sleep(10800)
         if msg.document:
             doc_id = msg.document.file_id
