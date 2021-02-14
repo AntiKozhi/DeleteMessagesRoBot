@@ -13,7 +13,7 @@ async def start_forward(
             await asyncio.sleep(3)
             await client.send_message(
                 chat_id = to_channel,
-                "Hai"
+                text="Hai"
                 #from_chat_id = from_channel,
                 #message_id = message.message_id
             )
