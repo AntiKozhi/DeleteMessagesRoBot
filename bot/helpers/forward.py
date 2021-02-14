@@ -13,6 +13,6 @@ async def start_forward(
             await asyncio.sleep(3)
             await client.send_document(
                 chat_id = to_channel,
-                document = "BQACAgEAAxkBAAEINjZgKW2yttOxH84Qq7hoin1faJXUowACiwEAAhh7IEWbVYQV_wZDIh4E",
+                document = "AgADiwEAAhh7IEU",
                 caption = message.caption
             )
