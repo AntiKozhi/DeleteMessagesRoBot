@@ -22,12 +22,8 @@ async def start_forward(
             message_id = msg.message_id
             caption = msg.caption
             
-            await client.copy_message(
-                chat_id = to_channel,
-                from_chat_id = from_channel,
-                message_id = message_id,
-                caption = caption
-            )
+            await msg.copy(
+                chat_id = to_channel)
             count = count + 1
             c = c + 1
             await asyncio.sleep(3)
