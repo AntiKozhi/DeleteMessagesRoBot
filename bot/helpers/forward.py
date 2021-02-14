@@ -19,12 +19,13 @@ async def start_forward(
         if c == 10000:
             await asyncio.sleep(10800)
         if msg.document:
-            doc_id = msg.document.file_id
+            message_id = msg.message_id
             caption = msg.caption
             
-            await client.send_document(
+            await client.copy_message(
                 chat_id = to_channel,
-                document = doc_id,
+                from_chat_id = from_channel,
+                message_id = message_id,
                 caption = caption
             )
             count = count + 1
